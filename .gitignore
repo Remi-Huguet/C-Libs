@@ -1,6 +1,11 @@
 # Prerequisites
 *.d
 
+# Tests
+tests/unit_tests
+tests/*.gcno
+tests/*.gcda
+
 # Object files
 obj/
 *.o

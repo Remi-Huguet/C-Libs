@@ -1,9 +1,8 @@
-NAME = stringlib.a
+NAME = cstringlib.a
 
 CC = gcc
 CFLAGS = -W -Wall -Wextra -Werror
 LFLAGS = -g -Llib/my -lmy
-TESTFLAGS = --coverage -lcriterion
 
 SRCDIR = src
 OBJDIR = obj
@@ -22,12 +21,17 @@ mkdir:
 
 all: $(NAME)
 
+tests_run:
+	$(MAKE) -C tests re
+
 clean:
 	rm -rf $(OBJDIR)
+	$(MAKE) -C tests clean
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) $(TESTS_NAME)
+	$(MAKE) -C tests fclean
 
 re: fclean all
 
-.PHONY: re fclean clean all mkdir
+.PHONY: re fclean clean all tests_run mkdir
