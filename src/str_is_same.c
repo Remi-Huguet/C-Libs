@@ -5,6 +5,9 @@ int str_get_len(char *str);
 
 bool str_is_same(char *str, char *dist)
 {
+    if (str == NULL && dist == NULL) {
+        return true;
+    }
     if (str == NULL || dist == NULL || str_get_len(str) != str_get_len(dist)) {
         return false;
     }

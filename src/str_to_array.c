@@ -10,7 +10,7 @@ char **str_to_array(char *str, char separator)
         return NULL;
     }
     int len = str_get_len(str);
-    char **array = malloc(sizeof(char) * (len + 1));
+    char **array = malloc(sizeof(char *) * (len + 1));
     if (array == NULL) {
         return NULL;
     }
