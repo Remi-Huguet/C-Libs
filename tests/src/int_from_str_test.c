@@ -4,40 +4,45 @@ char *int_to_str(int number);
 
 Test(int_to_str, convert_zero)
 {
-    char *str = int_to_str(0);
+    int number = 0;
+    char *res = int_to_str(number);
     char *expected = "0";
 
-    cr_assert_str_eq(str, expected, "Expected \"0\", but got \"%s\"", str);
+    cr_assert_str_eq(res, expected, "Expected \"%s\", but got \"%s\"", expected, res);
 }
 
 Test(int_to_str, convert_negative_number)
 {
-    char *str = int_to_str(-1932);
+    int number = -1932;
+    char *res = int_to_str(number);
     char *expected = "-1932";
 
-    cr_assert_str_eq(str, expected, "Expected \"-1932\", but got \"%s\"", str);
+    cr_assert_str_eq(res, expected, "Expected \"%s\", but got \"%s\"", expected, res);
 }
 
 Test(int_to_str, convert_little_negative_number)
 {
-    char *str = int_to_str(-2);
+    int number = -2;
+    char *res = int_to_str(number);
     char *expected = "-2";
 
-    cr_assert_str_eq(str, expected, "Expected \"-2\", but got \"%s\"", str);
+    cr_assert_str_eq(res, expected, "Expected \"%s\", but got \"%s\"", expected, res);
 }
 
 Test(int_to_str, convert_positive_number)
 {
-    char *str = int_to_str(1932);
+    int number = 1932;
+    char *res = int_to_str(number);
     char *expected = "1932";
 
-    cr_assert_str_eq(str, expected, "Expected \"1932\", but got \"%s\"", str);
+    cr_assert_str_eq(res, expected, "Expected \"%s\", but got \"%s\"", expected, res);
 }
 
 Test(int_to_str, convert_little_positive_number)
 {
-    char *str = int_to_str(2);
+    int number = 2;
+    char *res = int_to_str(number);
     char *expected = "2";
 
-    cr_assert_str_eq(str, expected, "Expected \"2\", but got \"%s\"", str);
+    cr_assert_str_eq(res, expected, "Expected \"%s\", but got \"%s\"", expected, res);
 }

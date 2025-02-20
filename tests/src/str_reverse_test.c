@@ -4,35 +4,35 @@ char *str_reverse(char *str);
 
 Test(str_reverse, null_test)
 {
-    char *str = str_reverse(NULL);
-    bool res = false;
+    char *str = NULL;
+    char *res = str_reverse(str);
 
-    if (str == NULL) {
-        res = true;
-    }
-    cr_assert(res == true, "Expected \"NULL\", but got \"%s\"", str);
+    cr_assert(res == NULL, "Expected \"NULL\", but got \"%s\"", str);
 }
 
 Test(str_reverse, reverse_short_string)
 {
-    char *str = str_reverse("a");
+    char *str = "a";
+    char *res = str_reverse(str);
     char *expected = "a";
 
-    cr_assert_str_eq(str, expected, "Expected \"%s\", but got \"%s\"", expected, str);
+    cr_assert_str_eq(res, expected, "Expected \"%s\", but got \"%s\"", expected, res);
 }
 
 Test(str_reverse, reverse_medium_string)
 {
-    char *str = str_reverse("azerty");
+    char *str = "azerty";
+    char *res = str_reverse(str);
     char *expected = "ytreza";
 
-    cr_assert_str_eq(str, expected, "Expected \"%s\", but got \"%s\"", expected, str);
+    cr_assert_str_eq(res, expected, "Expected \"%s\", but got \"%s\"", expected, res);
 }
 
 Test(str_reverse, reverse_large_string)
 {
-    char *str = str_reverse("azertyuiopazertyuiop");
+    char *str = "azertyuiopazertyuiop";
+    char *res = str_reverse(str);
     char *expected = "poiuytrezapoiuytreza";
 
-    cr_assert_str_eq(str, expected, "Expected \"%s\", but got \"%s\"", expected, str);
+    cr_assert_str_eq(res, expected, "Expected \"%s\", but got \"%s\"", expected, res);
 }

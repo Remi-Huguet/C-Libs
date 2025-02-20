@@ -4,7 +4,9 @@ bool str_is_same(char *str, char *dist);
 
 Test(str_is_same, null_test_one_string)
 {
-    bool res = str_is_same("heheha", NULL);
+    char *str = "heheha";
+    char *dist = NULL;
+    bool res = str_is_same(str, dist);
     bool expected = false;
 
     cr_assert(res == expected, "Expected false but got true");
@@ -12,7 +14,9 @@ Test(str_is_same, null_test_one_string)
 
 Test(str_is_same, null_test_both_strings)
 {
-    bool res = str_is_same(NULL, NULL);
+    char *str = NULL;
+    char *dist = NULL;
+    bool res = str_is_same(str, dist);
     bool expected = true;
 
     cr_assert(res == expected, "Expected true but got false");
@@ -20,7 +24,9 @@ Test(str_is_same, null_test_both_strings)
 
 Test(str_is_same, compare_different_size)
 {
-    int res = str_is_same("azera", "azerae");
+    char *str = "azera";
+    char *dist = "azerae";
+    bool res = str_is_same(str, dist);
     bool expected = false;
 
     cr_assert(res == expected, "Expected false but got true");
@@ -28,7 +34,9 @@ Test(str_is_same, compare_different_size)
 
 Test(str_is_same, compare_same_size_different_content)
 {
-    int res = str_is_same("azert", "yuiop");
+    char *str = "azert";
+    char *dist = "yuiop";
+    bool res = str_is_same(str, dist);
     bool expected = false;
 
     cr_assert(res == expected, "Expected false but got true");
@@ -36,7 +44,9 @@ Test(str_is_same, compare_same_size_different_content)
 
 Test(str_is_same, compare_same_size_same_content)
 {
-    bool res = str_is_same("azert", "azert");
+    char *str = "azert";
+    char *dist = "azert";
+    bool res = str_is_same(str, dist);
     bool expected = true;
 
     cr_assert(res == expected, "Expected true but got false");
