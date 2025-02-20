@@ -1,8 +1,8 @@
-# C-String-Lib
-Functions from the lib string.h maked
+# C-Lib
+Some functions from the basics c libs maked, and new ones.
 
 ## Description
-This project create a lib with a lot of function of the string.h lib.
+This project create a lib with a lot of function of the string.h lib and others utils functions.
 The idea of this project was make again a project i had to to in first year, but after learning more things (4 years later).
 
 ## Run
@@ -22,12 +22,7 @@ sudo apt install libcriterion-dev
 ```
 
 ## Functions handled
-- Execution of all binary in the differents paths they can be : "/bin/", "/usr/bin/", "/usr/local/bin/", "/sbin/"
-- cd is not handled with ~
-- env, setenv, unsetenv
-- exit to leave
-
-## Options that are planed to be handled
-- ";" handler, to use multiple commands
-- Redirections (">", ">>", "<", "<<") handlers
-- Pipes ("|", "||") handlers
+- str_get_len (strlen that return int not size_t)
+- str_is_same (like strcmp, but return a boolean)
+- str_to_array (a split function)
+- array_get_len (get len of an array) 

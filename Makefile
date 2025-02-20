@@ -1,4 +1,4 @@
-NAME = cstringlib.a
+NAME = libc.a
 
 CC = gcc
 CFLAGS = -W -Wall -Wextra -Werror

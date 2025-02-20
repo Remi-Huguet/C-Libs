@@ -6,8 +6,14 @@ int str_get_len(char *str);
 
 char **str_to_array(char *str, char separator)
 {
+    if (str == NULL) {
+        return NULL;
+    }
     int len = str_get_len(str);
     char **array = malloc(sizeof(char) * (len + 1));
+    if (array == NULL) {
+        return NULL;
+    }
     int arrayIndex = 0;
     int i = 0;
 
@@ -16,6 +22,9 @@ char **str_to_array(char *str, char separator)
             i++;
         }
         char *line = malloc(sizeof(char) * (len + 1));
+        if (line == NULL) {
+            return NULL;
+        }
         int lineIndex = 0;
  
         while (i < len && str[i] != separator) {
