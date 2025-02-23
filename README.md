@@ -28,6 +28,7 @@ sudo apt install libcriterion-dev
 - int_to_str (convert a string to an int)
 - str_contain (check if a string contain a caractere)
 - str_copy (copy a string in an other)
+- str_duplicate (duplicate a string)
 - str_get_len (strlen that return int not size_t)
 - str_is_integer (check if a string is a integer in string format)
 - str_is_same (like strcmp, but return a boolean)

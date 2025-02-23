@@ -1,44 +1,44 @@
 #include <criterion/criterion.h>
 #include "macros.h"
 
-void str_copy(char **dest, char *str);
+char *str_duplicate(char *str);
 
-Test(str_copy, null_test)
+Test(str_duplicate, null_test)
 {
     char *res = NULL_STR;
     char *str = NULL_STR;
+    res = str_duplicate(str);
     char *expected = NULL_STR;
-    str_copy(&res, str);
 
     cr_assert(res == expected, "Expected \"%s\", but got \"%s\"", expected, res);
 }
 
-Test(str_copy, short_string)
+Test(str_duplicate, short_string)
 {
     char *res = NULL_STR;
     char *str = "Oui";
+    res = str_duplicate(str);
     char *expected = "Oui";
-    str_copy(&res, str);
 
     cr_assert_str_eq(res, expected, "Expected \"%s\", but got \"%s\"", expected, res);
 }
 
-Test(str_copy, medium_string)
+Test(str_duplicate, medium_string)
 {
     char *res = NULL_STR;
     char *str = "Azertyuiop";
+    res = str_duplicate(str);
     char *expected = "Azertyuiop";
-    str_copy(&res, str);
 
     cr_assert_str_eq(res, expected, "Expected \"%s\", but got \"%s\"", expected, res);
 }
 
-Test(str_copy, large_string)
+Test(str_duplicate, large_string)
 {
     char *res = NULL_STR;
-    char *str = "Azertyuiop Qsdfghjklm";
-    char *expected = "Azertyuiop Qsdfghjklm";
-    str_copy(&res, str);
+    char *str = "AzertyuiopQsdfghjklm";
+    res = str_duplicate(str);
+    char *expected = "AzertyuiopQsdfghjklm";
 
     cr_assert_str_eq(res, expected, "Expected \"%s\", but got \"%s\"", expected, res);
 }
