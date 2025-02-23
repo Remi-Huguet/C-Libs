@@ -4,7 +4,7 @@
 
 int str_get_len(char *str);
 
-bool str_is_same(char *str, char *dist)
+bool str_is_same(char *str, char *str_to_compare)
 {
     if (str == POINTER_ERROR && dist == POINTER_ERROR) {
         return true;

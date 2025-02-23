@@ -3,7 +3,7 @@
 #include "macros.h"
 
 int array_get_len(char **array);
-bool str_is_same(char *str, char *dist);
+bool str_is_same(char *str, char *str_to_compare);
 
 bool array_is_same(char **array, char **array_to_compare)
 {
