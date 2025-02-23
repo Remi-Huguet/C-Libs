@@ -23,13 +23,14 @@ sudo apt install libcriterion-dev
 ```
 
 ## Functions handled
-- str_get_len (strlen that return int not size_t)
-- str_is_same (like strcmp, but return a boolean)
-- str_reverse (reverse a string)
-- str_to_array (a split function)
-- str_contain (check if a string contain a caractere)
-- str_to_int (convert a string to a int)
-- str_is_integer (check if a string is a integer in string format)
 - array_get_len (get len of an array)
 - array_is_same (check if two array are the same)
 - int_to_str (convert a string to an int)
+- str_contain (check if a string contain a caractere)
+- str_copy (copy a string in an other)
+- str_get_len (strlen that return int not size_t)
+- str_is_integer (check if a string is a integer in string format)
+- str_is_same (like strcmp, but return a boolean)
+- str_reverse (reverse a string)
+- str_to_array (a split function)
+- str_to_int (convert a string to a int)
