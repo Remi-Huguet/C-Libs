@@ -1,12 +1,14 @@
 #include <stdbool.h>
 #include <stddef.h>
+#include "macros.h"
 
 int str_get_len(char *str);
 bool str_is_integer(char *str);
 
 int str_to_int(char *str) {
-    if (str == NULL || !str_is_integer(str)) {
-        return 0;
+    if (str == POINTER_ERROR) return NULL_INT;
+    if (!str_is_integer(str)) {
+        return NULL_INT;
     }
     int res = 0;
     int index = str_get_len(str) - 1;

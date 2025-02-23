@@ -1,4 +1,5 @@
 #include <criterion/criterion.h>
+#include "macros.h"
 
 int str_get_len(const char *str);
 
@@ -40,7 +41,7 @@ Test(str_get_len, get_the_len_of_a_large_string)
 
 Test(str_get_len, null_test)
 {
-    char *str = NULL;
+    char *str = NULL_STR;
     int res = str_get_len(str);
     int expected = 0;
 

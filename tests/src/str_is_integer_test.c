@@ -1,10 +1,11 @@
 #include <criterion/criterion.h>
+#include "macros.h"
 
 bool str_is_integer(char *str);
 
 Test(str_is_integer, null_test)
 {
-    char *str = NULL;
+    char *str = NULL_STR;
     bool res = str_is_integer(str);
     bool expected = false;
 

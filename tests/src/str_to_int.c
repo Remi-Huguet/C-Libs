@@ -1,12 +1,13 @@
 #include <criterion/criterion.h>
+#include "macros.h"
 
 int str_to_int(const char *str);
 
 Test(str_to_int, null_test)
 {
-    char *str = NULL;
+    char *str = NULL_STR;
     int res = str_to_int(str);
-    int expected = 0;
+    int expected = NULL_INT;
 
     cr_assert_eq(res, expected, "Expected get %d, but got %d", expected, res);
 }
@@ -15,7 +16,7 @@ Test(str_to_int, not_number)
 {
     char *str = "-23fez";
     int res = str_to_int(str);
-    int expected = 0;
+    int expected = NULL_INT;
 
     cr_assert_eq(res, expected, "Expected get %d, but got %d", expected, res);
 }
@@ -24,7 +25,7 @@ Test(str_to_int, bad_negative_number_input)
 {
     char *str = "1-3232";
     int res = str_to_int(str);
-    int expected = 0;
+    int expected = NULL_INT;
 
     cr_assert_eq(res, expected, "Expected get %d, but got %d", expected, res);
 }

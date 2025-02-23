@@ -1,10 +1,11 @@
 #include <criterion/criterion.h>
+#include "macros.h"
 
 int array_get_len(char **array);
 
 Test(array_get_len, get_the_len_of_big_array)
 {
-    char *array[11] = {"azer", "azeraz", "azer", "azerazr", "azerazer", "azer", "azeraz", "azer", "azerazr", "azerazer", NULL};
+    char *array[11] = {"azer", "azeraz", "azer", "azerazr", "azerazer", "azer", "azeraz", "azer", "azerazr", "azerazer", ARRAY_END};
     int res = array_get_len(array);
     int expected = 10;
 
@@ -13,7 +14,7 @@ Test(array_get_len, get_the_len_of_big_array)
 
 Test(array_get_len, get_the_len_of_medium_array)
 {
-    char *array[6] = {"azer", "azeraz", "azer", "azerazr", "azerazer", NULL};
+    char *array[6] = {"azer", "azeraz", "azer", "azerazr", "azerazer", ARRAY_END};
     int res = array_get_len(array);
     int expected = 5;
 
@@ -31,7 +32,7 @@ Test(array_get_len, get_the_len_of_little_array)
 
 Test(array_get_len, get_the_len_of_empty_array)
 {
-    char *array[] = {NULL};
+    char *array[] = {ARRAY_END};
     int res = array_get_len(array);
     int expected = 0;
 
@@ -40,7 +41,7 @@ Test(array_get_len, get_the_len_of_empty_array)
 
 Test(array_get_len, null_test)
 {
-    char **array = NULL;
+    char **array = NULL_ARRAY;
     int res = array_get_len(array);
     int expected = 0;
 

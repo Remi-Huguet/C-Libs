@@ -1,13 +1,14 @@
 #include <criterion/criterion.h>
+#include "macros.h"
 
 char *str_reverse(char *str);
 
 Test(str_reverse, null_test)
 {
-    char *str = NULL;
+    char *str = NULL_STR;
     char *res = str_reverse(str);
 
-    cr_assert(res == NULL, "Expected \"NULL\", but got \"%s\"", str);
+    cr_assert(res == NULL_STR, "Expected \"NULL\", but got \"%s\"", str);
 }
 
 Test(str_reverse, reverse_short_string)

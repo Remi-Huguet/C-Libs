@@ -1,11 +1,12 @@
 #include <criterion/criterion.h>
 #include <stdbool.h>
+#include "macros.h"
 
 bool str_contain(char *str, char c);
 
 Test(str_contain, null_test)
 {
-    char *str = NULL;
+    char *str = NULL_STR;
     char c = 'a';
     bool res = str_contain(str, c);
     bool expected = false;

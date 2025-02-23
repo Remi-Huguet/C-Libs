@@ -1,11 +1,12 @@
 #include <criterion/criterion.h>
+#include "macros.h"
 
 bool str_is_same(char *str, char *dist);
 
 Test(str_is_same, null_test_one_string)
 {
     char *str = "heheha";
-    char *dist = NULL;
+    char *dist = NULL_STR;
     bool res = str_is_same(str, dist);
     bool expected = false;
 
@@ -14,8 +15,8 @@ Test(str_is_same, null_test_one_string)
 
 Test(str_is_same, null_test_both_strings)
 {
-    char *str = NULL;
-    char *dist = NULL;
+    char *str = NULL_STR;
+    char *dist = NULL_STR;
     bool res = str_is_same(str, dist);
     bool expected = true;
 

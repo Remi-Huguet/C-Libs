@@ -1,7 +1,7 @@
 NAME = libc.a
 
 CC = gcc
-CFLAGS = -W -Wall -Wextra -Werror
+CFLAGS = -W -Wall -Wextra -Werror -Iinclude
 LFLAGS = -g -Llib/my -lmy
 
 SRCDIR = src

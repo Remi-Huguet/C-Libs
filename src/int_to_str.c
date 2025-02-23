@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdbool.h>
+#include "macros.h"
 
 char *str_reverse(char *str);
 
@@ -9,9 +10,7 @@ char *int_to_str(int number)
         return "0";
     }
     char *str = malloc(sizeof(char) * 1);
-    if (str == NULL) {
-        return NULL;
-    }
+    if (str == MALLOC_ERROR) return NULL_STR;
     int str_index = 0;
     bool negative = false;
 
@@ -26,21 +25,17 @@ char *int_to_str(int number)
             rest = rest / (i / 10);
         }
         str = realloc(str, sizeof(char) * 1);
-        if (str == NULL) {
-            return NULL;
-        }
+        if (str == MALLOC_ERROR) return NULL_STR;
         str[str_index] =  rest + '0';
         number = number - (number % i);
         str_index++;
     }
     if (negative) {
         str = realloc(str, sizeof(char) * 1);
-        if (str == NULL) {
-            return NULL;
-        }
+        if (str == MALLOC_ERROR) return NULL_STR;
         str[str_index] = '-';
         str_index++;
     }
-    str[str_index] = '\0';
+    str[str_index] = STR_END;
     return str_reverse(str);
 }
