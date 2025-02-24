@@ -45,3 +45,4 @@ make fclean
 ### From stdlib.h lib :
 - allocate_memory (malloc)
 - free_memory (free)
+- reallocate_memory (realloc)

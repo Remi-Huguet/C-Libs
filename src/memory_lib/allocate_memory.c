@@ -1,6 +1,5 @@
 #include "macros.h"
 #include "memory.h"
-#include <stddef.h>
 #include <unistd.h>
 
 block_t *head = NULL_BLOCK;

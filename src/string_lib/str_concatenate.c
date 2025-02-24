@@ -3,11 +3,12 @@
 #include "macros.h"
 
 int str_get_len(char *str);
+void *allocate_memory(size_t size);
 
 void str_concatenate(char **dest, char *str)
 {
     if (dest == POINTER_ERROR || *dest == POINTER_ERROR || str == POINTER_ERROR) return;
-    char *concatenated_str = malloc(sizeof(char) * (str_get_len(*dest) + str_get_len(str) + 1));
+    char *concatenated_str = allocate_memory(sizeof(char) * (str_get_len(*dest) + str_get_len(str) + 1));
     if (concatenated_str == MALLOC_ERROR) return;
     int i = 0;
     int j = 0;

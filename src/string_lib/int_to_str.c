@@ -3,13 +3,15 @@
 #include "macros.h"
 
 char *str_reverse(char *str);
+void *allocate_memory(size_t size);
+void *reallocate_memory(void *ptr, size_t new_size);
 
 char *int_to_str(int number)
 {
     if (number == 0) {
         return "0";
     }
-    char *str = malloc(sizeof(char) * 1);
+    char *str = allocate_memory(sizeof(char) * 2);
     if (str == MALLOC_ERROR) return NULL_STR;
     int str_index = 0;
     bool negative = false;
@@ -24,14 +26,14 @@ char *int_to_str(int number)
         if (i != 10) {
             rest = rest / (i / 10);
         }
-        str = realloc(str, sizeof(char) * (str_index + 1));
+        str = reallocate_memory(str, sizeof(char) * (str_index + 2));
         if (str == MALLOC_ERROR) return NULL_STR;
         str[str_index] =  rest + '0';
         number = number - (number % i);
         str_index++;
     }
     if (negative) {
-        str = realloc(str, sizeof(char) * (str_index + 1));
+        str = reallocate_memory(str, sizeof(char) * (str_index + 2));
         if (str == MALLOC_ERROR) return NULL_STR;
         str[str_index] = '-';
         str_index++;
