@@ -49,3 +49,4 @@ make fclean
 - reallocate_memory (realloc)
 ### From stdio.h lib :
 - print_char (print a char)
+- print_str (print a string)
