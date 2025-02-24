@@ -6,7 +6,7 @@ RM = rm -rf
 CFLAGS = -W -Wall -Wextra -Werror -I../include
 TESTFLAGS = --coverage -lcriterion
 
-SRCDIR = ../src
+SRCDIR = ../src/string_lib
 TESTSRCDIR = ./src/string_lib
 
 SRC = $(SRCDIR)/*.c

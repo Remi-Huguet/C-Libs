@@ -1,9 +1,9 @@
 #include <stddef.h>
 #include <stdlib.h>
-#include <string.h>
 #include "macros.h"
 
 int str_get_len(char *str);
+char *str_duplicate(char *str);
 
 char **str_to_array(char *str, char separator)
 {
@@ -28,7 +28,7 @@ char **str_to_array(char *str, char separator)
             lineIndex++;
             if (i == len || str[i] == separator) {
                 line[lineIndex] = STR_END;
-                array[arrayIndex]= strdup(line);
+                array[arrayIndex]= str_duplicate(line);
                 arrayIndex++; 
                 free(line);
             }
