@@ -8,5 +8,6 @@
 #define NULL_STR NULL
 #define NULL_INT 0
 #define NULL_ARRAY NULL
+#define NULL_POINTER NULL
 
 #endif /* !MACROS_H_ */

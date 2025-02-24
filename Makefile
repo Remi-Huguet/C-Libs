@@ -6,10 +6,10 @@ RM = rm -rf
 CFLAGS = -W -Wall -Wextra -Werror -Iinclude
 LFLAGS = -g -Llib/my -lmy
 
-SRCDIR = src/string_lib
+SRCDIR = src/string_lib src/memory_lib
 OBJDIR = obj
 
-SRC = $(SRCDIR)/*.c
+SRC = $(foreach dir, $(SRCDIR), $(dir)/*.c)
 OBJ = $(SRC:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 
 $(NAME): $(OBJ)
