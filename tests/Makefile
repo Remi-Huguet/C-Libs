@@ -4,7 +4,7 @@ CC = gcc
 RM = rm -rf
 
 CFLAGS = -W -Wall -Wextra -Werror -I../include
-TESTFLAGS = --coverage -lcriterion
+TESTFLAGS = -lcriterion
 
 SRCDIR = ../src/string_lib ../src/memory_lib ../src/print_lib
 TESTSRCDIR = src/string_lib src/memory_lib src/print_lib
@@ -19,7 +19,7 @@ $(TEST_EXEC): $(SRC) $(TESTSSRC)
 	./$(TEST_EXEC)
 
 clean:
-	$(RM) $(TEST_EXEC) *.gcda *.gcno
+	$(RM) $(TEST_EXEC)
 
 fclean: clean
 
