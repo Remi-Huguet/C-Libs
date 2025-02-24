@@ -3,8 +3,8 @@ CFLAGS = -W -Wall -Wextra -Werror -I../include
 TESTFLAGS = --coverage -lcriterion
 SRCDIR = ../src
 TESTSRCDIR = ./src
-SRC = $(wildcard $(SRCDIR)/*.c)
-TESTSSRC = $(wildcard $(TESTSRCDIR)/*.c)
+SRC = $(SRCDIR)/*.c
+TESTSSRC = $(TESTSRCDIR)/*.c
 TEST_EXEC = unit_tests
 
 all: $(TEST_EXEC)
@@ -14,7 +14,7 @@ $(TEST_EXEC): $(SRC) $(TESTSSRC)
 	./$(TEST_EXEC)
 
 clean:
-	rm -f $(TEST_EXEC) *.gcda *.gcno
+	$(RM) $(TEST_EXEC) *.gcda *.gcno
 
 fclean: clean
 
