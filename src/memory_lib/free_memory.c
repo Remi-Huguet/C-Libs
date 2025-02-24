@@ -14,7 +14,6 @@ void free_memory(void *ptr)
         if (block->next) {
             block->next->prev = block;
         }
-        free_memory((void *)(block + 1));
     }
     if (block->prev && block->prev->free) {
         block->prev->size += sizeof(block_t) + block->size;
@@ -22,7 +21,6 @@ void free_memory(void *ptr)
         if (block->next) {
             block->next->prev = block->prev;
         }
-        free_memory((void *)(block->prev + 1));
     }
     if (!block->next) {
         if (block->prev) {
