@@ -44,5 +44,6 @@ make fclean
 - str_to_int (convert a string to a int)
 ### From stdlib.h lib :
 - allocate_memory (malloc)
+- copy_memory (memcpy)
 - free_memory (free)
 - reallocate_memory (realloc)
