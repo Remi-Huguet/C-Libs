@@ -7,7 +7,7 @@ CFLAGS = -W -Wall -Wextra -Werror -I../include
 TESTFLAGS = --coverage -lcriterion
 
 SRCDIR = ../src
-TESTSRCDIR = ./src
+TESTSRCDIR = ./src/string_lib
 
 SRC = $(SRCDIR)/*.c
 TESTSSRC = $(TESTSRCDIR)/*.c

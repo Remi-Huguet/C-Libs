@@ -6,7 +6,7 @@ RM = rm -rf
 CFLAGS = -W -Wall -Wextra -Werror -Iinclude
 LFLAGS = -g -Llib/my -lmy
 
-SRCDIR = src
+SRCDIR = src/string_lib
 OBJDIR = obj
 
 SRC = $(SRCDIR)/*.c

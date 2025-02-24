@@ -1,5 +1,5 @@
-#ifndef C_LIB_H_
-#define C_LIB_H_
+#ifndef STRING_LIB_H_
+#define STRING_LIB_H_
 
 int array_get_len(char **array);
 bool array_is_same(char **array, char **array_to_compare);
@@ -15,4 +15,4 @@ char *str_reverse(char *str);
 char **str_to_array(char *str, char separator);
 int str_to_int(char *str);
 
-#endif /* !C_LIB_H_ */
+#endif /* !STRING_LIB_H_ */
