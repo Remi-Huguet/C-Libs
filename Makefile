@@ -1,6 +1,8 @@
 NAME = libc.a
 
 CC = gcc
+RM = rm -rf
+
 CFLAGS = -W -Wall -Wextra -Werror -Iinclude
 LFLAGS = -g -Llib/my -lmy
 
@@ -8,7 +10,7 @@ SRCDIR = src
 OBJDIR = obj
 
 SRC = $(SRCDIR)/*.c
-OBJ = $(SRC:.c=.o)
+OBJ = $(SRC:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)

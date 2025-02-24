@@ -1,11 +1,16 @@
+TEST_EXEC = unit_tests
+
 CC = gcc
+RM = rm -rf
+
 CFLAGS = -W -Wall -Wextra -Werror -I../include
 TESTFLAGS = --coverage -lcriterion
+
 SRCDIR = ../src
 TESTSRCDIR = ./src
+
 SRC = $(SRCDIR)/*.c
 TESTSSRC = $(TESTSRCDIR)/*.c
-TEST_EXEC = unit_tests
 
 all: $(TEST_EXEC)
 
