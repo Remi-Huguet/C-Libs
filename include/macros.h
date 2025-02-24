@@ -9,5 +9,6 @@
 #define NULL_INT 0
 #define NULL_ARRAY NULL
 #define NULL_POINTER NULL
+#define NULL_CHAR '\0'
 
 #endif /* !MACROS_H_ */

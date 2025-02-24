@@ -47,3 +47,5 @@ make fclean
 - copy_memory (memcpy)
 - free_memory (free)
 - reallocate_memory (realloc)
+### From stdio.h lib :
+- print_char (print a char)

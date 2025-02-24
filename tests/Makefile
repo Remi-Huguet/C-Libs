@@ -6,8 +6,8 @@ RM = rm -rf
 CFLAGS = -W -Wall -Wextra -Werror -I../include
 TESTFLAGS = --coverage -lcriterion
 
-SRCDIR = ../src/string_lib ../src/memory_lib
-TESTSRCDIR = ./src/string_lib ./src/memory_lib
+SRCDIR = ../src/string_lib ../src/memory_lib ../src/print_lib
+TESTSRCDIR = src/string_lib src/memory_lib src/print_lib
 
 SRC = $(foreach dir, $(SRCDIR), $(dir)/*.c)
 TESTSSRC = $(foreach dir, $(TESTSRCDIR), $(dir)/*.c)

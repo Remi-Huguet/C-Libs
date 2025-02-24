@@ -6,7 +6,7 @@ RM = rm -rf
 CFLAGS = -W -Wall -Wextra -Werror -Iinclude
 LFLAGS = -g -Llib/my -lmy
 
-SRCDIR = src/string_lib src/memory_lib
+SRCDIR = src/string_lib src/memory_lib src/print_lib
 OBJDIR = obj
 
 SRC = $(foreach dir, $(SRCDIR), $(dir)/*.c)
