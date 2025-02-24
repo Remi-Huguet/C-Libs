@@ -7,7 +7,7 @@ void str_copy(char **dest, char *str);
 
 char *str_duplicate(char *str)
 {
-    if (str == NULL_STR) return NULL_STR;
+    if (str == POINTER_ERROR) return NULL_STR;
     char *new_str = NULL;
 
     str_copy(&new_str, str);

@@ -42,3 +42,15 @@ Test(str_copy, large_string)
 
     cr_assert_str_eq(res, expected, "Expected \"%s\", but got \"%s\"", expected, res);
 }
+
+Test(str_copy, multiple_copy)
+{
+    char *res = NULL_STR;
+    char *str = "Azertyuiop";
+    char *str2 = "Qsdfghjklm";
+    char *expected = "Qsdfghjklm";
+    str_copy(&res, str);
+    str_copy(&res, str2);
+
+    cr_assert_str_eq(res, expected, "Expected \"%s\", but got \"%s\"", expected, res);
+}

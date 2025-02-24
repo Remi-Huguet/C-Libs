@@ -4,6 +4,7 @@
 int array_get_len(char **array);
 bool array_is_same(char **array, char **array_to_compare);
 int int_to_str(int number);
+void str_concatenate(char **dest, char *str);
 bool str_contain(char *str, char c);
 void str_copy(char **dest, char *str);
 char *str_duplicate(char *str);

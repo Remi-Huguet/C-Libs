@@ -42,3 +42,15 @@ Test(str_duplicate, large_string)
 
     cr_assert_str_eq(res, expected, "Expected \"%s\", but got \"%s\"", expected, res);
 }
+
+Test(str_duplicate, multiple_duplicate)
+{
+    char *res = NULL_STR;
+    char *str = "Azertyuiop";
+    char *str2 = "Qsdfghjklm";
+    res = str_duplicate(str);
+    res = str_duplicate(str2);
+    char *expected = "Qsdfghjklm";
+
+    cr_assert_str_eq(res, expected, "Expected \"%s\", but got \"%s\"", expected, res);
+}

@@ -37,3 +37,13 @@ Test(str_reverse, reverse_large_string)
 
     cr_assert_str_eq(res, expected, "Expected \"%s\", but got \"%s\"", expected, res);
 }
+
+Test(str_reverse, multiple_reverse)
+{
+    char *str = "azertyuiopazertyuiop";
+    char *res = str_reverse(str);
+    res = str_reverse(res);
+    char *expected = "azertyuiopazertyuiop";
+
+    cr_assert_str_eq(res, expected, "Expected \"%s\", but got \"%s\"", expected, res);
+}

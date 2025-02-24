@@ -27,6 +27,7 @@ sudo apt install libcriterion-dev
 - array_is_same (check if two array are the same)
 - int_to_str (convert a string to an int)
 - str_contain (check if a string contain a caractere)
+- str_concatenate (concatenate two strings)
 - str_copy (copy a string in an other)
 - str_duplicate (duplicate a string)
 - str_get_len (strlen that return int not size_t)

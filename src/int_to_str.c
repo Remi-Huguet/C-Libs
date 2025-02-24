@@ -24,14 +24,14 @@ char *int_to_str(int number)
         if (i != 10) {
             rest = rest / (i / 10);
         }
-        str = realloc(str, sizeof(char) * 1);
+        str = realloc(str, sizeof(char) * (str_index + 1));
         if (str == MALLOC_ERROR) return NULL_STR;
         str[str_index] =  rest + '0';
         number = number - (number % i);
         str_index++;
     }
     if (negative) {
-        str = realloc(str, sizeof(char) * 1);
+        str = realloc(str, sizeof(char) * (str_index + 1));
         if (str == MALLOC_ERROR) return NULL_STR;
         str[str_index] = '-';
         str_index++;
