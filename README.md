@@ -50,5 +50,6 @@ make fclean
 ### From stdio.h lib :
 - print_char (print a char)
 - print_float (print a float)
-- print_int (print a int)
+- print_int (print a nint)
+- print_octal (print an in octal)
 - print_str (print a string)
