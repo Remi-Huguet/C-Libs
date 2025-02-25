@@ -3,7 +3,6 @@
 #include "macros.h"
 
 char *str_reverse(char *str);
-void *allocate_memory(size_t size);
 void *reallocate_memory(void *ptr, size_t new_size);
 
 char *int_to_str(int number)
@@ -11,8 +10,7 @@ char *int_to_str(int number)
     if (number == 0) {
         return "0";
     }
-    char *str = allocate_memory(sizeof(char) * 2);
-    if (str == MALLOC_ERROR) return NULL_STR;
+    char *str = NULL_STR;
     int str_index = 0;
     bool negative = false;
 
