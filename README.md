@@ -48,8 +48,10 @@ make fclean
 - free_memory (free)
 - reallocate_memory (realloc)
 ### From stdio.h lib :
+- print_binary (print an int in binary)
 - print_char (print a char)
 - print_float (print a float)
+- print_formatted (printf with these flags handled : 's', 'c', 'd', 'i', 'o', 'x', 'X', '%', 'b' and 'f' withtout .xf handled)
 - print_hexa (print an int in hexa)
 - print_int (print a nint)
 - print_octal (print an int in octal)
