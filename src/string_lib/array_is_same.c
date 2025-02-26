@@ -1,6 +1,5 @@
-#include <stdbool.h>
-#include <stddef.h>
 #include "macros.h"
+#include <stdbool.h>
 
 int array_get_len(char **array);
 bool str_is_same(char *str, char *str_to_compare);

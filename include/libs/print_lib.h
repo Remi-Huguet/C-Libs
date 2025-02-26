@@ -1,6 +1,7 @@
 #ifndef PRINT_LIB_H_
 #define PRINT_LIB_H_
 
+#include "macros.h"
 #include <stdbool.h>
 
 void print_binary(int number);

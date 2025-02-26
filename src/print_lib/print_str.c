@@ -1,5 +1,5 @@
-#include <unistd.h>
 #include "macros.h"
+#include <unistd.h>
 
 void print_char(char c);
 

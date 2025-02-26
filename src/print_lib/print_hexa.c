@@ -1,6 +1,5 @@
 #include "macros.h"
 #include <stdbool.h>
-#include <stddef.h>
 
 char *str_reverse(char *str);
 void print_char(char c);

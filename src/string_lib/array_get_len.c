@@ -1,4 +1,3 @@
-#include <stddef.h>
 #include "macros.h"
 
 int array_get_len(char **array)

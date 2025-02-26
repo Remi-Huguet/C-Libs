@@ -1,6 +1,5 @@
-#include <stdbool.h>
-#include <stddef.h>
 #include "macros.h"
+#include <stdbool.h>
 
 bool str_contain(char *str, char c)
 {

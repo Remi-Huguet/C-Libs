@@ -1,6 +1,5 @@
-#include <stdlib.h>
-#include <stdbool.h>
 #include "macros.h"
+#include <stdbool.h>
 
 char *str_reverse(char *str);
 void *reallocate_memory(void *ptr, size_t new_size);

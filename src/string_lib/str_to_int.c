@@ -1,6 +1,5 @@
-#include <stdbool.h>
-#include <stddef.h>
 #include "macros.h"
+#include <stdbool.h>
 
 int str_get_len(char *str);
 bool str_is_integer(char *str);

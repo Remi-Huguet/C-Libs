@@ -1,7 +1,7 @@
-#include <stdarg.h>
-#include <stdbool.h>
 #include "macros.h"
 #include "libs/print_lib.h"
+#include <stdarg.h>
+#include <stdbool.h>
 
 bool str_contain(char *str, char c);
 int str_get_len(char *str);

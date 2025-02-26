@@ -1,5 +1,3 @@
-#include <stddef.h>
-#include <stdlib.h>
 #include "macros.h"
 
 int str_get_len(char *str);

@@ -1,6 +1,8 @@
 #ifndef STRING_LIB_H_
 #define STRING_LIB_H_
 
+#include "macros.h"
+
 int array_get_len(char **array);
 bool array_is_same(char **array, char **array_to_compare);
 int int_to_str(int number);
