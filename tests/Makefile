@@ -1,27 +1,31 @@
-TEST_EXEC = unit_tests
+NAME = unit_tests
 
 CC = gcc
 RM = rm -rf
 
 CFLAGS = -W -Wall -Wextra -Werror -I../include
 TESTFLAGS = -lcriterion
+LFLAGS = -L../ -lsc
 
-SRCDIR = ../src/string_lib ../src/memory_lib ../src/print_lib
-TESTSRCDIR = src/string_lib src/memory_lib src/print_lib
+TESTSRCDIRS = src/string_lib src/memory_lib src/print_lib
 
-SRC = $(foreach dir, $(SRCDIR), $(dir)/*.c)
-TESTSSRC = $(foreach dir, $(TESTSRCDIR), $(dir)/*.c)
+TESTSSRC = $(foreach dir, $(TESTSRCDIRS), $(wildcard $(dir)/*.c))
+TESTOBJ = $(TESTSSRC:.c=.o)
 
-all: $(TEST_EXEC)
+all: $(NAME)
 
-$(TEST_EXEC): $(SRC) $(TESTSSRC)
-	$(CC) $(CFLAGS) $(TESTFLAGS) $^ -o $(TEST_EXEC)
-	./$(TEST_EXEC)
+$(NAME): $(TESTOBJ)
+	$(CC) -o $(NAME) $(TESTOBJ) $(CFLAGS) $(TESTFLAGS) $(LFLAGS)
+	./$(NAME)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(TEST_EXEC)
+	$(RM) $(TESTOBJ)
 
 fclean: clean
+	$(RM) $(NAME)
 
 re: fclean all
 
