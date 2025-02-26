@@ -7,9 +7,9 @@ CFLAGS = -W -Wall -Wextra -Werror -I../include
 TESTFLAGS = -lcriterion
 LFLAGS = -L../ -lsc
 
-TESTSRCDIRS = src/string_lib src/memory_lib src/print_lib
+TESTSRCDIR = src/string_lib src/memory_lib src/print_lib
 
-TESTSSRC = $(foreach dir, $(TESTSRCDIRS), $(wildcard $(dir)/*.c))
+TESTSSRC = $(foreach dir, $(TESTSRCDIR), $(wildcard $(dir)/*.c))
 TESTOBJ = $(TESTSSRC:.c=.o)
 
 all: $(NAME)

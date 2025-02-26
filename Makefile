@@ -6,9 +6,9 @@ RM = rm -rf
 
 CFLAGS = -W -Wall -Wextra -Werror -Iinclude
 
-SRCDIRS = src/string_lib src/memory_lib src/print_lib
+SRCDIR = src/string_lib src/memory_lib src/print_lib
 
-SRC = $(foreach dir, $(SRCDIRS), $(wildcard $(dir)/*.c))
+SRC = $(foreach dir, $(SRCDIR), $(wildcard $(dir)/*.c))
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
