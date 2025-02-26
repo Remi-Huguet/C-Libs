@@ -32,4 +32,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: re fclean clean all tests_run mkdir
+.PHONY: re fclean clean all tests_run
