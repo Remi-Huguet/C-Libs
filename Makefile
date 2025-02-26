@@ -1,37 +1,33 @@
-NAME = libc.a
+NAME = libsc.a
 
+CC_LIB = ar rcs
 CC = gcc
 RM = rm -rf
 
 CFLAGS = -W -Wall -Wextra -Werror -Iinclude
-LFLAGS = -g -Llib/my -lmy
 
-SRCDIR = src/string_lib src/memory_lib src/print_lib
-OBJDIR = obj
+SRCDIRS = src/string_lib src/memory_lib src/print_lib
 
-SRC = $(foreach dir, $(SRCDIR), $(dir)/*.c)
-OBJ = $(SRC:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
-
-$(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
-
-$(OBJDIR)/%.o: $(SRCDIR)/%.c | mkdir
-	$(CC) $(CFLAGS) -c $< -o $@
-
-mkdir:
-	mkdir -p $(OBJDIR)
+SRC = $(foreach dir, $(SRCDIRS), $(wildcard $(dir)/*.c))
+OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-tests_run:
+$(NAME): $(OBJ)
+	$(CC_LIB) $(NAME) $(OBJ)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+tests_run: $(NAME)
 	$(MAKE) -C tests re
 
 clean:
-	$(RM) $(OBJDIR)
+	$(RM) $(OBJ)
 	$(MAKE) -C tests clean
 
 fclean: clean
-	$(RM) $(NAME) $(TESTS_NAME)
+	$(RM) $(NAME)
 	$(MAKE) -C tests fclean
 
 re: fclean all
