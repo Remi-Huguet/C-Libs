@@ -30,6 +30,7 @@ make fclean
 ## Functions handled
 
 ### From string.h lib :
+- array_contain(check if a array contain a str)
 - array_get_len (get len of an array)
 - array_is_same (check if two array are the same)
 - int_to_str (convert a string to an int)

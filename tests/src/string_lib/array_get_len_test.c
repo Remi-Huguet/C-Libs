@@ -23,7 +23,7 @@ Test(array_get_len, get_the_len_of_medium_array)
 
 Test(array_get_len, get_the_len_of_little_array)
 {
-    char *array[2] = {"azer", NULL};
+    char *array[2] = {"azer", ARRAY_END};
     int res = array_get_len(array);
     int expected = 1;
 
