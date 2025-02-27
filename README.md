@@ -58,3 +58,7 @@ make fclean
 - print_int (print a nint)
 - print_octal (print an int in octal)
 - print_str (print a string)
+
+# Functions that can be handled in the future :
+All utils fonctions that manage strings, arrays, int or char.
+Others utils system functions that can relay about others concept (like create the "ls" command to implement files and dirs analyses).
