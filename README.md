@@ -4,8 +4,8 @@ Some functions from the basics c libs maked, and new ones.
 ## Description
 This project create a lib with a lot of function of the string.h lib and others utils functions like printf or malloc.
 Some functions were very easy to do, others were way more difficult.
-The idea of this project was to refacto projects i've done in first year of studies, but after learning more things.
-All have unit tests.
+The idea of this project was to refacto projects i've done in first year of studies at Epitech, but after learning more things.
+All functions have unit tests.
 
 ## Run
 ```bash
