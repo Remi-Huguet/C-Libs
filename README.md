@@ -1,10 +1,10 @@
 # C-Libs
-Some functions from the basics c libs maked, and new ones.
+Some functions from the basic C libraries were made, along with new ones.
 
 ## Description
-This project create a lib with a lot of function of the string.h lib and others utils functions like printf or malloc.
-Some functions were very easy to do, others were way more difficult.
-The idea of this project was to refacto projects i've done in first year of studies at Epitech, but after learning more things.
+This project creates a library with many functions from the string.h library and other utility functions like printf and malloc.
+Some functions were very easy to implement, while others were much more challenging.
+The idea behind this project was to refactor projects I did in my first year at Epitech after gaining more knowledge.
 All functions have unit tests.
 
 ## Run
@@ -12,7 +12,7 @@ All functions have unit tests.
 make
 ```
 
-## Run Unit Tests Dependencies
+## Install Unit Tests Dependencies
 ```bash
 sudo apt install libcriterion-dev
 ```
@@ -29,7 +29,7 @@ make fclean
 
 ## Functions handled
 
-### From string.h lib :
+### String management :
 - array_contain(check if a array contain a str)
 - array_get_len (get len of an array)
 - array_is_same (check if two array are the same)
@@ -44,12 +44,12 @@ make fclean
 - str_reverse (reverse a string)
 - str_to_array (a split function)
 - str_to_int (convert a string to a int)
-### From stdlib.h lib :
+### Memory management :
 - allocate_memory (malloc)
 - copy_memory (memcpy)
 - free_memory (free)
 - reallocate_memory (realloc)
-### From stdio.h lib :
+### To print :
 - print_binary (print an int in binary)
 - print_char (print a char)
 - print_float (print a float)
@@ -59,6 +59,6 @@ make fclean
 - print_octal (print an int in octal)
 - print_str (print a string)
 
-# Functions that can be handled in the future :
-All utils fonctions that manage strings, arrays, int or char.
-Others utils system functions that can relay about others concept (like create the "ls" command to implement files and dirs analyses).
+# Functions that can be implemented in the future:
+- All utility functions for managing strings, arrays, integers, or characters.
+- Other system utility functions that rely on different concepts (e.g., creating an "ls" command to analyze files and directories).
