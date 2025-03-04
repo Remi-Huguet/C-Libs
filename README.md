@@ -64,6 +64,6 @@ make fclean
 - print_octal (print an int in octal)
 - print_str (print a string)
 
-# Functions that can be implemented in the future:
+## Functions that can be implemented in the future:
 - All utility functions for managing strings, arrays, integers, or characters.
 - Other system utility functions that rely on different concepts (e.g., creating an "ls" command to analyze files and directories).
