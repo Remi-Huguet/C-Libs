@@ -7,6 +7,11 @@ Some functions were very easy to implement, while others were much more challeng
 The idea behind this project was to refactor projects I did in my first year at Epitech after gaining more knowledge.
 All functions have unit tests.
 
+## Install Dependencies
+```bash
+sudo apt install gcc
+```
+
 ## Run
 ```bash
 make
